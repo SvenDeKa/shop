@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+	settings from TypoScript/FlexForm:
+
+	isEditable (user is able to update the cart)
+	isCheckout (this is the checkoutView used inside Formhandler)
+
+<f:section name="main">
+	<f:flashMessages />
+
+	<f:if condition="{cart.products}">
+		<f:then>
+
+			<f:if condition="{settings.cartShow.isCheckout} !=1">
+				<header>
+					<h1>Ihre Seminare</h1>
+				</header>
+			</f:if>
+			<f:render partial="Checkout/Cart" arguments="{_all}"/>
+
+		</f:then>
+		<f:else>
+			<div class="alert alert-info">Ihr Warenkorb ist leer.</div>
+		</f:else>
+	</f:if>
+
+		
+		
+</f:section>

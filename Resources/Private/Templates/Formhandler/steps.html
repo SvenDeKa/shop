@@ -1,0 +1,234 @@
+<!-- ###TEMPLATE_FORM1### -->
+
+	<h1>Warenkorb</h1>
+	<h2>###master_steps###</h2>
+	
+	<div class="row-fluid">
+		<div class="col-sm-12">
+			###CART###
+		</div>
+		<hr>
+		###master_multipart-form-start_contact-form###
+		###CART_HIDDENFIELDS###
+		<div class="col-sm-3 pull-right">
+			###master_sumbit_next-step###
+		</div>
+		###master_form-end###
+	</div>
+	
+<!-- ###TEMPLATE_FORM1### -->
+
+
+
+
+
+
+
+
+<!-- ###TEMPLATE_FORM2### -->
+
+	<h1>Ihre Daten</h1>
+	<h2>###master_steps###</h2>
+	
+	###master_multipart-form-start_contact-form###
+	###CART_HIDDENFIELDS###
+	<div class="row-fluid">
+		<div class="col-sm-6">
+			<fieldset>
+				<legend>Ihre Rechnungsaddresse</legend>
+			
+				###master_salutation_billing###
+				###master_input_firstnameshipping###
+				###master_input_lastnameshipping###
+				###master_input_companyshipping###
+				###master_input_streetnrshipping###
+				###master_input_zipcityshipping###
+				###master_input_countryshipping###
+				###master_input_phoneshipping###
+				###master_input_emailshipping###
+			</fieldset>
+		</div>
+		<div class="col-sm-6">
+			<fieldset>
+				<legend>Abweichende</legend>
+				###master_checkbox_useshippingaddress###
+				###master_salutation_shipping###
+				###master_input_firstnameshipping###
+				###master_input_lastnameshipping###
+				###master_input_companyshipping###
+				###master_input_streetnrshipping###
+				###master_input_zipcityshipping###
+				###master_input_countryshipping###
+				###master_input_phoneshipping###
+				###master_input_emailshipping###
+			</fieldset>
+		</div>
+		
+	</div>
+	<div class="row-fluid clearfix">
+		<div class="col-sm-9">
+			###LLL:required-hint###
+		</div>
+		<div class="col-sm-3 pull-right">
+			###master_sumbit_next-step###
+		</div>
+		###master_form-end###
+	</div>
+	
+<!-- ###TEMPLATE_FORM2### -->
+
+
+
+
+
+
+
+
+<!-- ###TEMPLATE_FORM3### -->
+
+	<h1>Zahlungsart und Versand</h1>
+	<h2>###master_steps###</h2>
+	
+	###master_multipart-form-start_contact-form###
+		###CART_HIDDENFIELDS###
+		<div class="row-fluid">
+			<div class="col-sm-6">
+				<fieldset>
+					<legend>Zahlungsart</legend>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="col-sm-6">
+				<fieldset>
+					<legend>Versandart</legend>
+				</fieldset>
+			</div>
+			<div class="col-sm-6 box gray">
+				<h3>FRachkosten</h3>
+				<ul>
+					<li>bis 10kg: 8,50€</li>
+					<li>bis 15kg: 12,00€</li>
+					<li>bis 20kg: 18,00€</li>
+					<li>bis 70kg: 53,50€ (Spedition)</li>
+					<li>über 70kg: nur auf Anfrage</li>
+				</ul>
+				<p>
+					Alle Frachtkosten inkl. Mehrwertsteuer.<br>
+					Irrtümer und Änderungen vorbehalten - alle Maße sind ca.-Angaben.
+				</p>
+			</div>
+		</div>
+		<div class="row-fluid clearfix">
+			<div class="col-sm-3 pull-right">
+				###master_sumbit_next-step###
+			</div>
+		</div>
+	###master_form-end###
+<!-- ###TEMPLATE_FORM3### -->
+
+
+
+
+
+
+
+<!-- ###TEMPLATE_FORM4### -->
+
+<h1>Bestellung abschließen</h1>
+	<h2>###master_steps###</h2>
+	
+	
+	
+	
+	<div class="row-fluid clearfix">
+		<div class="col-sm-4">
+			<h3>
+				###LLL:formPartHeader_billingAddress###
+			</h3>
+			<p>
+				###value_billingsalution###<br>
+				###value_billingfirstname### ###value_billinglastname###<br>
+				###value_billingcompany###<br>
+				###value_billingstreetnr###<br>
+				###value_billingzipcity###<br>
+				###value_billingcountry###<br>
+			</p>
+			<p>
+				###value_billingphone###<br>
+				###value_billingemail###
+			</p>
+		</div>
+		<div class="col-sm-4">
+			<h3>
+				###LLL:formPartHeader_shippingAddresss###
+			</h3>
+			<p>
+				###value_shippingsalution###<br>
+				###value_shippingfirstname### ###value_shippinglastname###<br>
+				###value_shippingcompany###<br>
+				###value_shippingstreetnr###<br>
+				###value_shippingzipcity###<br>
+				###value_shippingcountry###<br>
+			</p>
+			<p>
+				###value_shippingphone###
+			</p>
+		</div>
+		<div class="col-sm-4">
+			<h3>
+				###LLL:formPartHeader_payment###
+				###value_payment###
+			</h3>
+			<h3>
+				###LLL:formPartHeader_shipping###				###value_payment###
+				###value_shipping###
+			</h3>
+		</div>
+	</div>
+	<div class="row-fluid clearfix">
+		###master_check_agb### ###AGB_TEXT###
+	</div>
+	<div class="row-fluid">
+		<div class="col-sm-8">
+			###CART###
+		</div>
+	</div>
+	<div class="row-fluid">
+		###master_multipart-form-start_contact-form###
+			<div class="col-sm-4">
+				###CART_HIDDENFIELDS###
+				
+				<h3>###LLL:contact-header###</h3>
+				
+				<p>###LLL:configuration-text-begin###</p>
+				
+				###master_section-start###
+					###master_salutation###
+					###master_input_firstname###
+					###master_input_lastname###
+					###master_input_company###
+					###master_input_streetnr###
+					###master_input_country###
+					###master_input_phone###
+					###master_input_email###
+					###master_textarea_message###
+				###master_section-end###
+
+				###master_section-start###
+					###master_checkbox_recieve-newsletter###
+				###master_section-end###
+
+				<p>###LLL:configuration-text-end###</p>
+
+				###master_section-start###
+					###master_order-now###
+				###master_section-end###
+				
+			</div>
+		###master_form-end###
+	</div>
+<!-- ###TEMPLATE_FORM4### -->
+
+
+

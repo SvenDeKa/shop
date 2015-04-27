@@ -1,0 +1,46 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	
+	<f:flashMessages />
+	
+	
+	
+	<div class="row clearfix">
+		<f:render partial="Order/SearchForm"/>
+	</div>
+	
+	<hr>
+	<f:if condition="{orders}">
+		<f:then>
+			
+			<div class="row box gray clearfix">	
+				<div class="col-sm-2">Bestellnummer</div>	
+				<div class="col-sm-2">Bestelldatum</div>
+				<div class="col-sm-2">Bezahlstatus</div>
+				<div class="col-sm-2">Versandstatus</div>
+				<div class="col-sm-4"></div>
+			</div>
+			
+			<f:for each="{orders}" as="order">
+				<f:render partial="Order/ListItem" arguments="{order:order}"/>
+			</f:for>
+			
+		</f:then>
+		<f:else>
+			
+		</f:else>
+	</f:if>
+
+</f:section>

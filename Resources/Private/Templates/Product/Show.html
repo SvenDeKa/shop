@@ -1,0 +1,50 @@
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	<div class="row">
+		
+		<article class="span8">
+			<f:link.action pageUid="{settings.productList.pid}" action="list">Back to list</f:link.action>
+			
+			<header>
+				<h1>{product.name}</h1>
+			</header>
+			
+			<f:format.html parseFuncTSPath="lib.parseFunc_RTE">{product.description}</f:format.html>
+			
+		</article>
+
+		<aside class="span4">
+			<f:debug>{product}</f:debug>
+			
+			<f:debug>{product.loremfield}</f:debug>
+			<p>buhhhhuuuuu</p>
+			<f:debug>{product.ipsumfield}</f:debug>
+			
+			<f:for each="{product.prices}" as="price">
+				<div class="price{f:if(condition:'{price.isHighlight}', then:' is-highlight')}">
+					<f:if condition="{price.quantity} > 0">
+						<span class="from-qnt">ab {price.quantity} Stück: </span>
+					</f:if>
+					<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{price.priceGross}</f:format.currency>
+				</div>
+				<f:if condition="{price.isHighlight}"><f:else><span class="small tax">inkl. {price.taxrate}% MWSt</span></f:else></f:if>
+			</f:for>
+			<f:render partial="Cart/FormAddToCart" arguments="{product:product,settings:settings}"/>
+		</aside>
+		
+	<f:flashMessages />
+
+
+</f:section>

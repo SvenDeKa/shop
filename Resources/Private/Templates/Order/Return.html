@@ -1,0 +1,192 @@
+{namespace z=TYPO3\Z3Shop\ViewHelpers}
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+	
+	<f:if condition="{z:age(date:'{order.ordered}',format:'d')} > 14">
+		
+		
+		<f:then>
+			<div class="alert alert-warning">
+				Ihre Bestellung liegt {order.age} zurück.<br>
+				Eine Rücksendung ist nur bis zu 14Tage möglich.
+			</div>
+		</f:then>
+		
+		
+		
+		<f:else>
+			<f:if condition="{arguments.return.done} != 1"> 
+			<f:comment>not sent</f:comment>
+			
+				<f:then>
+
+					<h1>Rücksendung der Bestellnr. {order.number}</h1>
+					<p><f:format.date format="d.m.Y">{order.ordered}</f:format.date></p>
+					<p>
+						Wenn Sie von Ihrem gesetzlichen Widerufsrecht Gebrauch machen, füllen Sie bitte das Rücksende-Formular auf dieser Seite aus.<br>
+						Dieses Formular dient uns zur besseren Rückabwicklung Ihrer widerufenen Bestellung. Zudem prüfen wir hier Ihre Daten: Wenn Sie Daten falsch eingegeben haben oder Ihr Widerruf außerhalb der gesetzlichen Fristen ist, dann können Sie dieses Formular nicht ausdrucken.
+					</p>
+
+					<h2>Ihre Daten</h2>
+					<div class="col-sm-6">
+						<h3>Rechnungsadresse</h3>
+						{order.billingFirstname} {order.billingLastname}<br>
+						{order.billingCompany}<br>
+						{order.billingStreetNr}<br>
+						{order.billingZip} {order.billingCity}
+					</div>
+
+					<div class="col-sm-6">
+						<h3>Lieferadresse</h3>
+						<p>
+							{order.shippingFirstname} {order.shippingLastname}<br>
+							{order.shippingCompany}<br>
+							{order.shippingStreetNr}<br>
+							{order.shippingZip} {order.shippingCity}
+						</p>
+					</div>
+
+					<h2>Rücksende Lieferschein</h2>
+					<p>Rücksendung an Humbaur</p>
+					<p>
+						Humbaur GmbH<br>
+						Abteilung Aftersales (Widerruf)<br>
+						Mercedesring 1<br>
+						D-86368 Gersthofen
+					</p>
+					<p>
+						Bitte legen Sie diesen Rücksendung-Lieferschein ausgefüllt der Ware bei die Sie zurückschicken möchten.<br>
+						Es werden nur Waren angenommen, die mit diesem Rücksendung-Lieferschein versehen sind.
+					</p>
+
+					<f:comment>
+						<f:form method="POST" arguments="{order:order}" additionalParams="{type:123456}">
+						</f:form>
+					</f:comment>
+					<f:form method="POST" additionalParams="{type:123456}">
+						<f:form.hidden name="return[done]" value="1"/>
+						<f:form.hidden name="order" value="{order}"/>
+						<h3>Bankdaten für Rücküberweisung</h3>
+
+						<label class="col-sm-2">Kontoinhaber</label>
+						<f:form.textfield name="return[bankAccountOwner]" /><br>
+						<label class="col-sm-2">Kontonummer</label>
+						<f:form.textfield name="return[bankAccountId]" /><br>
+						<label class="col-sm-2">name der Bank</label>
+						<f:form.textfield name="return[bankName]" /><br>
+						<label class="col-sm-2">Bankleitzahl</label>
+						<f:form.textfield name="return[bankId]" /><br>
+
+
+						<h3>Zurückzuliefernde Teile</h3>
+
+						<div class="row box gray clearfix">
+							<div class="col-sm-1">Auswahl</div>
+							<div class="col-sm-2">Teile-Nr.</div>
+							<div class="col-sm-6">Teile Bezeichnung</div>
+							<div class="col-sm-3">Anzahl</div>
+						</div>
+						<f:for each="{order.items}" as="item" iteration="i">
+							<div class="row clearfix">
+								<div class="col-sm-1"><f:form.checkbox name="return[items][{i.index}][send]" value="1"/></div>
+								<div class="col-sm-2">{item.prodNr}<f:form.hidden name="return[items][{i.index}][prodNr]" value="{item.prodNr}"/></div>
+								<div class="col-sm-6">{item.name}<f:form.hidden name="return[items][{i.index}][name]" value="{item.name}"/></div>
+								<div class="col-sm-3"><f:form.textfield name="return[items][{i.index}][amount]" value="{item.amount}"/></div>
+
+								<div class="col-sm-12">
+									<label>Rücksendegrund:</label>
+									<f:form.textfield name="return[items][{i.index}][reason]" value=""/>
+								</div>
+							</div>
+						</f:for>
+						<hr>
+						<div class="row clreafix">
+							<f:form.submit value="Rücksendeschein drucken"/>
+						</div>
+					</f:form>
+					
+				</f:then>
+				<f:else>
+					<f:alias map="{return: arguments.return}">
+						<a href="javascript:window.print();">Dokument drucken</a> <a href="javascript:history.back();">Druckansicht schließen</a>
+						<hr>
+
+						<div class="row">
+
+							<div class="col-sm-6 pull-right">
+								<p>{order.billingFirstname} {order.billingLastname}<br>
+								{order.billingCompany}<br>
+								{order.billingStreetNr}
+								</p>
+								<p>
+								{order.billingZipCity}
+								</p>
+								<p>{order.billingEmail}</p>
+								<p>{order.number}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div>
+								<p>
+									Humbaur GmbH<br>
+									Abteilung Aftersales (Widerruf)<br>
+									Mercedesring 1<br><br>
+									D-86368 Gersthofen
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<p><b>Rücksendung-Lieferschein</b></p>
+							<hr>
+							<p>
+								Ich bitte um Rückbuchung der Posten für beiliegende Teile auf folgendes Konto:
+							</p>
+							<table>
+								<tr><td>Kontoinh.:</td><td>{return.bankAccountOwner}</td></tr>
+								<tr><td>Kontonr.:</td><td>{return.bankAccountId}</td></tr>
+								<tr><td>BLZ.:</td><td>{return.bankId}</td></tr>
+								<tr><td>Bank:</td><td>{return.bankName}</td></tr>
+							</table>
+						</div>
+						<p><b>Rückgesendete Teile</b>
+						<table>
+							<tr>
+								<td class="col-sm-2">Teile-Nr.</td>
+								<td class="col-sm-6">Teile Bezeichnung</td>
+								<td class="col-sm-3">Anzahl</td>
+								<td class="col-sm-3">Rücksendegrund</td>
+							</tr>
+							<f:for each="{return.items}" as="item">
+								<f:if condition="{item.send}==1">
+									<tr>
+										<td class="col-sm-2">{item.prodNr}</td>
+										<td class="col-sm-6">{item.name}</td>
+										<td class="col-sm-3">{item.amount}</td>
+										<td class="col-sm-12">{item.reason}</td>
+									</tr>
+								</f:if>
+							</f:for>
+							</table>
+					</f:alias>
+				</f:else>
+			</f:if>
+			
+			
+		</f:else>
+		
+		
+		
+	</f:if>
+</f:section>

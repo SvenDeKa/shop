@@ -1,0 +1,56 @@
+plugin.tx_z3shop {
+	view {
+		# cat=plugin.tx_z3shop/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:z3_shop/Resources/Private/Templates/
+		# cat=plugin.tx_z3shop/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:z3_shop/Resources/Private/Partials/
+		# cat=plugin.tx_z3shop/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:z3_shop/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_z3shop//a; type=string; label=Default storage PID
+		storagePid = 12
+	}
+	settings{
+		currency{
+			# cat=plugin.tx_z3shop//a; type=string; label=currency used in the shop: ISO3-code
+			iso3 = EUR
+			# cat=plugin.tx_z3shop//a; type=string; label=currency used in the shop: symbol
+			symbolLeft = €
+			# cat=plugin.tx_z3shop//a; type=string; label=currency used in the shop: decimalPoint
+			decimalPoint = ,
+			# cat=plugin.tx_z3shop//a; type=string; label=currency used in the shop: thousandsPoint
+			thousandsPoint = .
+			# cat=plugin.tx_z3shop//a; type=string; label=currency used in the shop: name
+			name = Euro
+		}
+		assets{
+			jQueryLib = 
+			# cat=plugin.tx_z3shop//file; type=string; label=Css File
+			cssFile = EXT:z3_shop/Resources/Public/Css/tx_z3shop.less
+			# cat=plugin.tx_z3shop//a; type=boolean; label=add Js in Footer
+			includeJsInFooter = 1
+			# cat=plugin.tx_z3shop//file; type=string; label=Js File
+			jsFile = EXT:z3_shop/Resources/Public/Js/tx_z3shop.js
+		}
+#EXT:z3_shop/Resources/Private/Templates/Formhandler/
+		formhandlerTemplatePath = fileadmin/template/html/ext/formhandler/
+		formhandlerLanguagePath = EXT:z3_shop/Resources/Private/Language/
+# /fileadmin/template/lang/ext/formhandler/
+	}
+}
+
+module.tx_z3shop {
+	view {
+		# cat=module.tx_z3shop/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:z3_shop/Resources/Private/Backend/Templates/
+		# cat=module.tx_z3shop/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:z3_shop/Resources/Private/Backend/Partials/
+		# cat=module.tx_z3shop/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:z3_shop/Resources/Private/Backend/Layouts/
+	}
+	persistence {
+		# cat=module.tx_z3shop//a; type=string; label=Default storage PID
+		storagePid = 12
+	}
+}

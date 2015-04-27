@@ -1,0 +1,10 @@
+
+<f:form pageUid="{settings.cartShow.pid}" controller="Cart" method="POST" extensionName="Z3Shop" pluginName="Shop" class="add-to-cart">
+
+	<f:form.hidden name="action" value="update"/>
+	<f:form.hidden name="mode" value="update"/>
+	<f:form.hidden name="product" value="{product.uid}"/>
+	<f:form.textfield name="amount" value="1"/>
+	<f:form.submit value="in den Warenkorb legen" class="btn btn-primary" title="In den Warenkorb legen" />
+
+</f:form>

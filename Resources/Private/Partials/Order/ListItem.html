@@ -1,0 +1,45 @@
+{namespace z=TYPO3\Z3Shop\ViewHelpers}
+
+<div class="row clearfix">
+	<div class="col-sm-2">
+		<b>{order.number}</b><br>
+	</div>
+	<div class="col-sm-2">
+		<f:format.date format="d.m.Y">{order.ordered}</f:format.date>
+	</div>
+	<div class="col-sm-2">
+		<f:if condition="{order.payed}">
+			<f:then>
+					<f:format.date format="d.m.Y">{order.payed}</f:format.date>
+			</f:then>
+			<f:else>
+				erwartet Zahlungseingang
+			</f:else>
+		</f:if>
+	</div>
+	<div class="col-sm-2">
+		<f:if condition="{order.shipped}">
+			<f:then>
+					<f:format.date format="d.m.Y">{order.shipped}</f:format.date>
+			</f:then>
+			<f:else>
+				nicht versendet
+			</f:else>
+		</f:if>
+	</div>
+	<div class="col-sm-1">
+		
+	</div>
+	<div class="col-sm-3">
+	<f:if condition="{z:age(date:'{order.ordered}',format:'days ')} > 14">
+			<f:then>
+				Bestellung über 14Tage alt. <br>
+				keine Rücksendung möglich
+			</f:then>
+			<f:else>
+				<f:link.action action="return" arguments="{order:order}" class="btn btn-default">Rücksendung</f:link.action>
+			</f:else>
+		</f:if>
+	</div>
+</div>
+<hr>

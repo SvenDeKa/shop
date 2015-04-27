@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Language labels for Contact Form</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<!--
+			TEXT
+			-->
+			<!-- Angebot -->
+			<label index="contact-header">Ihre Kontaktdaten</label>
+			<label index="configuration-text-begin">Die Auswahl Ihrer Produkte wird zusammen mit Ihren Kontaktdaten an Humbaur übermittelt und an einen unserer Handelspartner in Ihrer Nähe übergeben. Dieser setzt sich kurzfristig mit Ihnen in Verbindung.</label>
+			
+			
+			<!-- Warenkorb -->
+			<label index="step_1">Schritt 1 von 4</label>
+			<label index="step_2">Schritt 2 von 4</label>
+			<label index="step_3">Schritt 3 von 4</label>
+			<label index="step_4">Schritt 4 von 4</label>
+			
+			<label index="header_basket">Warenkorb</label>
+			<label index="header_yourData">Ihre Daten</label>
+			<label index="header_paymentAndShipping">Zahlung und Versand</label>
+			<label index="header_confirmOrder">Bestellung abschließen</label>
+			<label index="header_freightcosts">Frachtkosten</label>
+			
+			<label index="formPartHeader_billingAddress">Ihre Rechnungsadresse</label>
+			<label index="formPartHeader_shippingAddress">Ihre Lieferadresse</label>
+			<label index="formPartHeader_payment">Zahlungsart</label>
+			<label index="formPartHeader_shipping">Versandart</label>
+
+			<!-- 
+			TIPP: always escape HTML in locallang with: 
+			<![CDATA[.......]]>
+			-->
+			<label index="text_freightDisclaimer"><![CDATA[Alle Frachtkosten inkl. Mehrwertsteuer.<br>Irrtümer und Änderungen vorbehalten - alle Maße sind ca.-Angaben.]]></label>
+			
+			<!-- 
+			Payment / Shipping
+			-->
+			<label index="label_paymentMoneyTransfer">Überweisung</label>
+			<label index="value_paymentMoneyTransfer">transfer</label> <!-- DONOT TRANSLATE ! - might be moved to TS -->
+			
+			<label index="label_shippingStandart">Standart</label>
+			<label index="value_shippingStandart">std</label> <!-- DONOT TRANSLATE ! -  might be moved to TS -->
+			
+			
+			<!-- 
+			LABELS 
+			-->	
+			<!-- general -->
+			<label index="salutation">Anrede</label>
+			<label index="salutationval_1">Herr</label>
+			<label index="salutationval_2">Frau</label>
+			<label index="firstname">Vorname</label>
+			<label index="lastname">Nachname</label>
+			<label index="company">Firma</label>
+			<label index="streetnr">Straße Nr.</label>
+			<label index="zip">PLZ</label>
+			<label index="city">Ort</label>
+			<label index="country">Land</label>
+			<label index="phone">Telefonnummer</label>
+			<label index="fax">Faxnummer</label>
+			<label index="email">E-Mail-Adresse</label>
+			<label index="recieve-newsletter">Ich möchte den Newsletter abonnieren, und in Zukunft über aktuelle Aktionen informiert werden.</label>
+			<label index="message">Nachricht</label>
+			<label index="privacypolicy"><![CDATA[<span>Ich erkläre mich mit den <a href="/datenschutz.html" target="_blank">Datenschutzbestimmungen</a> und den <a href="/agb.html" target="_blank">AGB´s</a> der Firma ZIEGELEI3 einverstanden</a></span>]]></label>
+			
+			<!-- contact -->
+			<label index="web">Webseite</label>
+			<label index="trailernumber">Fahrgestellnummer</label>
+			<label index="trailertype">Anhängertyp</label>
+			<label index="department">Bitte wählen</label>
+			<label index="departmentval_1">Allgemein</label>
+			<label index="departmentval_2">Vertrieb</label>
+			<label index="departmentval_3">Service</label>
+			<label index="departmentval_4">Ersatzteile</label>
+			<label index="departmentval_5">Technik</label>
+			<label index="departmentval_6">Marketing/Presse</label>
+
+			
+			<!-- billing -->
+			<label index="billingsalutation">Anrede</label>
+			<label index="billingsalutationval_1">Herr</label>
+			<label index="billingsalutationval_2">Frau</label>
+			<label index="billingfirstname">Vorname</label>
+			<label index="billinglastname">Nachname</label>
+			<label index="billingcompany">Firma</label>
+			<label index="billingstreetnr">Straße; Nr.</label>
+			<label index="billingzip">PLZ</label>
+			<label index="billingcity">Ort</label>
+			<label index="billingcountry">Land</label>
+			<label index="billingphone">Telefonnummer</label>
+			<label index="billingemail">E-Mail-Adresse</label>
+			
+			<!-- shipping -->
+			<label index="shippingsalutation">Anrede</label>
+			<label index="shippingsalutationval_1">Herr</label>
+			<label index="shippingsalutationval_2">Frau</label>
+			<label index="shippingfirstname">Vorname</label>
+			<label index="shippinglastname">Nachname</label>
+			<label index="shippingcompany">Firma</label>
+			<label index="shippingstreetnr">Straße; Nr.</label>
+			<label index="shippingzip">PLZ</label>
+			<label index="shippingcity">Ort</label>
+			<label index="shippingcountry">Land</label>
+			<label index="shippingphone">Telefonnummer</label>
+			
+			
+			<!-- btns -->
+			<label index="btn_submit">Absenden</label>
+			<label index="btn_prevStep">Zurück</label>
+			<label index="btn_nextStep">Weiter</label>
+			<label index="btn_orderNow">Jetzt bestellen</label>
+			<label index="btn_getOffer">Angebot anfordern</label>
+	
+	
+			<!-- 
+			Steps
+			-->
+			<label index="step_label">Schritt</label>
+			<label index="step_of">von</label>
+	
+			<!-- 
+			misc / TEXT
+			-->
+			<label index="text_requiredHint">* sind Pflichtfelder</label>
+			<label index="text_upTo">bis</label>
+			<label index="text_over">über</label>
+			<label index="text_onlyOnRequest">nur auf Anfrage</label>
+			<label index="text_logisticsHint">(Spedition)</label>
+			
+			
+			<!--
+			errors
+			-->
+			<label index="error_salutation_required">Bitte geben Sie eine Anrede an</label>
+			<label index="error_firstname_required">Bitte geben Sie einen Vornamen an</label>
+			<label index="error_lastname_required">Bitte geben Sie einen Nachnamen an</label>
+			<label index="error_company_required">Bitte geben Sie eine Firma an</label>
+			<label index="error_address_required">Bitte geben Sie eine Adresse an</label>
+			<label index="error_zip_required">Bitte geben Sie eine PLZ an</label>
+			<label index="error_city_required">Bitte geben Sie einen Ort an</label>
+			<label index="error_country_required">Bitte geben Sie ein Land an</label>
+			<label index="error_email_required">Bitte geben Sie eine E-Mail Adresse an</label>
+			<label index="error_email_email">Bitte geben Sie eine gültige E-Mail Adresse an</label>
+			<label index="error_phone_required">Bitte geben Sie eine Telefonnummer an</label>
+			<label index="error_fax_required">Bitte geben Sie eine Faxnummer an</label>
+			<label index="error_message_required">Bitte geben Sie eine Nachricht an</label>
+			
+			<label index="error_department_required">Bitte wählen Sie eine Abteilung aus</label>
+			<label index="error_web_required">Bitte wählen Sie eine Abteilung aus</label>
+			<label index="error_trailertype_required">Bitte geben Sie einen Anhängertyp an</label>
+			<label index="error_trailernumber_required">Bitte geben Sie eine Fahrgestellnummer an</label>
+			
+			<label index="error_billingsalutation_required">Bitte geben Sie eine Anrede an</label>
+			<label index="error_billingfirstname_required">Bitte geben Sie einen Vornamen an</label>
+			<label index="error_billinglastname_required">Bitte geben Sie einen Nachnamen an</label>
+			<label index="error_billingcompany_required">Bitte geben Sie eine Firma an</label>
+			<label index="error_billingaddress_required">Bitte geben Sie eine Adresse an</label>
+			<label index="error_billingstreetnr_required">Bitte geben Sie eine Hausnummer an</label>
+			<label index="error_billingzip_required">Bitte geben Sie eine PLZ an</label>
+			<label index="error_billingcity_required">Bitte geben Sie einen Ort an</label>
+			<label index="error_billingcountry_required">Bitte geben Sie ein Land an</label>
+			<label index="error_billingemail_required">Bitte geben Sie eine E-Mail Adresse an</label>
+			<label index="error_billingemail_email">Bitte geben Sie eine gültige E-Mail Adresse an</label>
+			<label index="error_billingmessage_required">Bitte geben Sie eine Nachricht an</label>
+			
+			<label index="error_shippingsalutation_required">Bitte geben Sie eine Anrede an</label>
+			<label index="error_shippingfirstname_required">Bitte geben Sie einen Vornamen an</label>
+			<label index="error_shippinglastname_required">Bitte geben Sie einen Nachnamen an</label>
+			<label index="error_shippingcompany_required">Bitte geben Sie eine Firma an</label>
+			<label index="error_shippingaddress_required">Bitte geben Sie eine Adresse an</label>
+			<label index="error_shippingstreetnr_required">Bitte geben Sie eine Strasse an</label>
+			<label index="error_shippingzip_required">Bitte geben Sie eine PLZ an</label>
+			<label index="error_shippingcity_required">Bitte geben Sie einen Ort an</label>
+			<label index="error_shippingcountry_required">Bitte geben Sie ein Land an</label>
+			<label index="error_shippingemail_required">Bitte geben Sie eine E-Mail Adresse an</label>
+			<label index="error_shippingemail_email">Bitte geben Sie eine gültige E-Mail Adresse an</label>
+			<label index="error_shippingmessage_required">Bitte geben Sie eine Nachricht an</label>
+			
+			<label index="error_privacypolicy_required">Bitte stimmen Sie den Datenschutzbestimmungen und den AGB zu</label>
+			
+			
+			<!--
+			emails
+			-->
+			<label index="email-admin-subject">Anhänger Angebotsanforderung</label>
+			<label index="email-admin-salutation">Sehr geehrte Damen und Herren,</label>
+			<label index="email-admin-welcome">Es wurde eine Anfrage mit folgender Zusammenstellung abgesendet:</label>
+			
+
+
+		</languageKey>
+	</data>
+</T3locallang>

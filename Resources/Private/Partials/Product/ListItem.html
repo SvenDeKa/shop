@@ -1,0 +1,37 @@
+
+
+<div class="row list-item">
+	<h2><f:link.action pageUid="{settings.productShow.pid}" action="show" arguments="{product : product}"> {product.name}</f:link.action></h2>
+	<div class="span3">
+		image goes here
+	</div>
+	<div class="span4">
+		<p>
+			<f:format.crop maxCharacters="140" append="..." respectWordBoundaries="1" respectHtml="1"> {product.description}</f:format.crop>
+		</p>
+	</div>
+	<div class="span4">
+		
+		<f:if condition="{product.specialPrice}">
+			<f:then>
+				<span class="price is-highlight">
+					<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{product.specialPrice.priceGross}</f:format.currency>
+				</span>
+				<span class="price stroke">
+					<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{product.basicPrice.priceGross}</f:format.currency>
+				</span>
+				<span class="small tax">inkl. {product.actualPrice.taxrate}% MWSt</span>
+			</f:then>
+			<f:else>
+				<span class="price">
+					<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{product.basicPrice.priceGross}</f:format.currency>
+				</span>
+				<span class="small tax">inkl. {product.basicPrice.taxrate}% MWSt</span>
+			</f:else>
+		</f:if>
+		
+		<f:render partial="Cart/FormAddToCart" arguments="{_all}"/>
+		<f:link.action pageUid="{settings.productShow.pid}" action="show" arguments="{product : product}" class="btn">Details</f:link.action>
+	</div>
+</div>
+

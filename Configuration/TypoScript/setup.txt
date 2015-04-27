@@ -1,0 +1,144 @@
+plugin.tx_z3shop {
+	mvc{
+	}
+	view {
+		templateRootPath = {$plugin.tx_z3shop.view.templateRootPath}
+		partialRootPath = {$plugin.tx_z3shop.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_z3shop.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_z3shop.persistence.storagePid}
+		userStoragePid = {$plugin.tx_z3shop.persistence.userStoragePid}
+		classes {
+#            Tx_Extbase_Domain_Model_FrontendUser {
+#                mapping {
+#                    tableName = fe_users
+#                }
+#            }
+#
+#			TYPO3\Z3Shop\Domain\Model\Item {
+#                subclasses {
+#                    Tx_Z3Event_Event = TYPO3\Z3Shop\Domain\Model\ItemEvent
+#                    Tx_Z3Event_Date = TYPO3\Z3Shop\Domain\Model\ItemDate
+#				}
+#            }
+#            TYPO3\Z3Shop\Domain\Model\ItemEvent {
+#                mapping {
+#                    tableName = tx_z3event_domain_model_event
+#                    recordType = Tx_Z3Event_Domain_Model_Event
+#                }
+#            }
+#            TYPO3\Z3Shop\Domain\Model\ItemDate {
+#                mapping {
+#                    tableName = tx_z3event_domain_model_date
+#                    recordType = Tx_Z3Event_Domain_Model_Date
+#                }
+#            }
+
+		}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings{
+		# general
+		assets{
+			jQueryLib = {$plugin.tx_z3shop.settings.assets.jQueryLib}
+			cssFile = {$plugin.tx_z3shop.settings.assets.cssFile}
+			includeJsInFooter = {$plugin.tx_z3shop.settings.assets.includeJsInFooter}
+			jsFile = {$plugin.tx_z3shop.settings.assets.jsFile}
+		}
+		#	Currency
+		currency{
+			iso3 = {$plugin.tx_z3shop.settings.currency.iso3}
+			symbolLeft = {$plugin.tx_z3shop.settings.currency.symbolLeft}
+			decimalPoint = {$plugin.tx_z3shop.settings.currency.decimalPoint}
+			thousandsPoint = {$plugin.tx_z3shop.settings.currency.thousandsPoint}
+		}
+		#	Products
+		products{
+		}
+		#	Order
+		orders{
+			orderNum{
+				10.type = text
+				10.value = ET
+				20.type = date
+				20.format = Ymd
+				#	30: aufsteigend // all // perDay / per Month / per Year
+				30.type = increment 
+				30.mode = perDay
+			}
+		}
+		productList.pid = 13
+		productShow.pid = 14
+		cartShow{
+			pid = 15
+			isEditable = 1
+			isCheckout = 0
+		}
+		orderShow.pid = 16
+		# Views withour controller-Action
+		checkout.pid = 18
+		checkout.languageFile = {$plugin.tx_z3shop.settings.formhandlerLanguagePath}/formhandler.xml
+		agb.pid = 
+		cancel.pid =
+		addressList.pid = 22
+		addressEdit.pid = 24
+	}
+}
+
+plugin.tx_z3shop_products < plugin.tx_z3shop
+plugin.tx_z3shop_cart < plugin.tx_z3shop
+plugin.tx_z3shop_checkout < plugin.tx_z3shop
+
+
+
+
+
+
+
+ # Module configuration
+module.tx_z3shop {
+	persistence {
+		storagePid = {$module.tx_z3shop.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_z3shop.view.templateRootPath}
+		partialRootPath = {$module.tx_z3shop.view.partialRootPath}
+		layoutRootPath = {$module.tx_z3shop.view.layoutRootPath}
+	}
+}
+
+
+#####
+#	Retourschein drucken
+#####
+z3_shop_printPage = PAGE
+z3_shop_printPage {
+	typeNum = 123456
+	config{
+		disableAllHeaderCode = 1
+	//	additionalHeaders = Content-type:text/html
+		xhtml_cleaning = 0
+		admPanel = 0
+		no_cache = 1
+		debug = 0
+	}
+	10 = USER
+	10{
+		userFunc = tx_extbase_core_bootstrap->run
+		vendorName = TYPO3
+
+		extensionName = Z3Shop
+		pluginName = Shop
+		controller = Shop
+		action = return
+		switchableControllerActions.Order.1 = return
+
+		settings =< plugin.tx_z3shop.settings
+		settings.isPrint = 1
+		persistence =< plugin.tx_z3shop.persistence
+	}
+}

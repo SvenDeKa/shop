@@ -1,0 +1,7 @@
+
+#	not in use, since extbase can not handle multitable-relations yet
+
+
+#	cat=products; type=string; label=Tables of potential Products: commaseparated list of db-tables where potential products are stored
+#	allowedTablenames = tx_z3event_domain_model_event, tx_z3event_domain_model_date
+

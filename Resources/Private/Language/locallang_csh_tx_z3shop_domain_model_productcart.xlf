@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-17T15:50:21Z" product-name="z3_shop">
+		<header/>
+		<body>
+
+			<trans-unit id="amount.description">
+				<source>Menge</source>
+			</trans-unit>
+			<trans-unit id="amount_special.description">
+				<source>abweichende Untermenge</source>
+			</trans-unit>
+			<trans-unit id="product.description">
+				<source>Produkt</source>
+			</trans-unit>
+			<trans-unit id="variant.description">
+				<source>Variante</source>
+			</trans-unit>
+			<trans-unit id="cart.description">
+				<source>Warenkorb</source>
+			</trans-unit>
+			<trans-unit id="reciever.description">
+				<source>reciever</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,26 @@
+config.tx_extbase{
+    persistence{
+        classes{
+
+            TYPO3\Z3Shop\Domain\Model\Customer {
+                mapping {
+                    tableName = fe_users
+#					recordType =
+                }
+            }
+#            
+#            TYPO3\CMS\Extbase\Domain\Model\FrontendUser {
+#                mapping {
+#                    tableName = fe_users
+#					subclasses {
+#						0 = \TYPO3\Z3Shop\Domain\Model\Customer
+#					}
+#          		}
+#            }
+    	}
+    }
+#	objects {
+#		In2\Femanager\Controller\AbstractController.className = TYPO3\Z3Shop\Controller\RegisterAbstractController
+#		In2\Femanager\Controller\NewController.className = TYPO3\Z3Shop\Controller\RegisterNewController
+#    }
+}

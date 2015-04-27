@@ -1,0 +1,18 @@
+
+<f:form method="POST" object="{order}">
+	
+	<div class="col-sm-4">
+		<label class="hidden">Bestenllnummer</label>
+		<f:form.textfield name="number" value="" class="form-control" placeholder="Bestellnummer"/>
+	</div>
+	
+	<div class="col-sm-4">
+		<label class="hidden">E-Mail</label>
+		<f:form.textfield name="billingEmail" value="" class="form-control" placeholder="E-Mail"/>
+	</div>
+	
+	<div class="col-sm-4">
+		<f:form.submit value="suchen" class="btn btn-default pull-right col-sm-3"/>
+	</div>
+	
+</f:form>

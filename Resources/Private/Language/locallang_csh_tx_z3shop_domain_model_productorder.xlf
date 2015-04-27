@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-17T15:50:22Z" product-name="z3_shop">
+		<header/>
+		<body>
+
+			<trans-unit id="amount.description">
+				<source>Bestellmenge</source>
+			</trans-unit>
+			<trans-unit id="amount_special.description">
+				<source>2. Bestellmenge - optionales Feld ohne Auswirkung aufPreiskalkulation</source>
+			</trans-unit>
+			<trans-unit id="price.description">
+				<source>Preis zum Zeitpunkt der Bestellung</source>
+			</trans-unit>
+			<trans-unit id="taxrate.description">
+				<source>MWSt-Satz zum Zeitpunkt der Bestellung</source>
+			</trans-unit>
+			<trans-unit id="product.description">
+				<source>product</source>
+			</trans-unit>
+			<trans-unit id="shoporder.description">
+				<source>order</source>
+			</trans-unit>
+			<trans-unit id="reciever.description">
+				<source>\Tx_Extbase_Domain_Model_FrontendUser</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

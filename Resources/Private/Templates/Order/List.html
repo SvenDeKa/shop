@@ -1,0 +1,90 @@
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Order</h1>
+
+<f:flashMessages />
+
+<table  class="tx_z3shop" >
+	<tr>
+		<th><f:translate key="tx_z3shop_domain_model_order.number" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.payment_type" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_type" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.price_sum_net" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.price_sum_gross" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_fee" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.payment_fee" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_firstname" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_lastname" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_company" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_street_nr" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_zip_city" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_country" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_phone" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.billing_email" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.alt_shipping_address" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_firstname" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_lastname" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_company" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_street_nr" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_zip_city" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_phone" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.price_sum_all" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.tax" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.payed" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipped" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.checked_terms" /></th>
+		<th><f:translate key="tx_z3shop_domain_model_order.shipping_weight" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{orders}" as="order">
+		<tr>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.number}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.paymentType}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingType}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.priceSumNet}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.priceSumGross}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingFee}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.paymentFee}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingFirstname}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingLastname}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingCompany}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingStreetNr}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingZipCity}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingCountry}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingPhone}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.billingEmail}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.altShippingAddress}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingFirstname}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingLastname}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingCompany}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingStreetNr}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingZipCity}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingPhone}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.priceSumAll}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.tax}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.payed -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shipped -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.checkedTerms}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{order : order}"> {order.shippingWeight}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{order : order}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{order : order}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Order</f:link.action>
+</f:section>

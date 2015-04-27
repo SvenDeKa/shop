@@ -1,0 +1,117 @@
+<f:layout name="Default" />
+
+	settings from TypoScript/FlexForm:
+
+	isEditable (user is able to update the cart)
+	isCheckout (this is the checkoutView used inside Formhandler)
+
+<f:section name="main">
+	<f:flashMessages />
+		
+	<div class="row">
+		<f:if condition="{settings.cartShow.isCheckout} !=1">
+			<header>
+				<h1>Warenkorb</h1>
+			</header>
+		</f:if>
+
+	<div class="span12">		
+		<f:if condition="{cart.products}">
+			<f:then>
+				
+				<div class="row">
+					<div class="span6">
+						Artikel
+					</div>
+					<div class="span2">
+						Einzelpreis
+					</div>
+					<div class="span2">
+						Stückzahl
+					</div>
+					<div class="span2">
+						Gesamtpreis
+					</div>
+				</div>
+				
+				<hr>
+				
+				<f:for each="{cart.products}" as="productCart">
+					<f:alias map="{product:productCart.product}">
+						<div class="row list-item" data-uid="{product.uid}">
+							<div class="bold span6">
+								<f:link.action pageUid="{settings.productShow.pid}" controller="Product" action="show" arguments="{product : product}">
+									{product.name}	
+								</f:link.action>
+							</div>
+							<div class="span2">
+								<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{productCart.priceGross}</f:format.currency>
+							</div>
+							<div class="span2">
+								<f:if condition="{settings.cartShow.isEditable}==1">
+									<f:then>
+										<f:form pageUid="{f:if(condition:'{settings.isCheckout}',then:'{settings.checkout.pid}',else:'{settings.cartShow.pid}')}" controller="Cart" method="POST" class="add-to-cart">
+											<f:form.hidden name="action" value="update"/>
+											<f:form.hidden name="mode" value="update"/>
+											<f:form.hidden name="product" value="{product}"/>
+											<f:form.textfield name="amount" size="3" value="{productCart.amount}" class="span1"/>
+											<f:form.submit value="aktualisieren" name="submit"  class="btn"/>
+										</f:form>
+
+
+										<f:form pageUid="{f:if(condition:'{settings.cartShow.isCheckout}',then:'{settings.checkout.pid}',else:'{settings.cartShow.pid}')}" controller="Cart" method="POST" class="remove-from-cart">
+											<f:form.hidden name="action" value="update"/>
+											<f:form.hidden name="mode" value="remove"/>
+											<f:form.hidden name="product" value="{product}"/>
+											<f:form.hidden name="amount" value="{productCart.amount}"/>
+											<f:form.submit value="entfernen" name="submit" class="btn"/>
+										</f:form>
+									</f:then>
+									<f:else>
+										{productCart.amount}
+									</f:else>
+								</f:if>
+							</div>
+							<div class="span2">
+								<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{productCart.priceSumGross}</f:format.currency>
+							</div>
+						</div>
+					</f:alias>
+				</f:for>
+				
+				<hr>
+				
+				
+				<div class="row">
+					<div class="span10 bold text-right">
+						netto<br>
+						<f:for each="{cart.taxes}" as="tax">
+							MWSt {tax.taxrate} %<br>
+						</f:for>
+						gesamt
+					</div>
+					<div class="span2">
+						<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{cart.price}</f:format.currency><br>
+						<f:for each="{cart.taxes}" as="tax">
+							<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{tax.tax}</f:format.currency><br>
+						</f:for>
+						<f:format.currency currencySign="{settings.currency.symbolLeft}" decimalSeparator="{settings.currency.decimalPoint}" thousandsSeparator="{settings.currency.thousandsPoint}">{cart.priceGross}</f:format.currency>
+					</div>
+				</div>
+				
+				<f:if condition="{settings.cartShow.isCheckout}!=1">
+				<div class="row">
+					<f:link.page pageUid="{settings.checkout.pid}" class="btn btn-primary pull-right">zur Kasse</f:link.page>
+				</div>
+				</f:if>
+				
+			</f:then>
+			<f:else>
+				<div class="alert alert-info">Ihre Warenkorb ist leer.</div>
+			</f:else>
+		</f:if>
+		
+		
+	</div>
+		
+</f:section>

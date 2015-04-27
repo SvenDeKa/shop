@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for backend of news</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="products_title">Shop - Produkte</label>
+			<label index="products_description">Stellt als Produkte definierte Daten dar. Liste, Detail</label>
+			<label index="cart_title">Shop - Warenkorb</label>
+			<label index="cart_description">Stellt die Produkte im WK dar</label>
+			<label index="checkout_title">Shop - Kasse</label>
+			<label index="checkout_description">Bestellungensprozess durchlaufen</label>
+			<label index="customer_title">Shop - Kundendaten</label>
+			<label index="customer_description">Anzeigen und bearbeiten der Adressdaten eines Kunden.</label>
+		</languageKey>
+	</data>
+</T3locallang>

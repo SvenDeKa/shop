@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-17T15:50:21Z" product-name="z3_shop">
+		<header/>
+		<body>
+
+			<trans-unit id="name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="amount_in_shop.description">
+				<source>amountInShop</source>
+			</trans-unit>
+			<trans-unit id="weight.description">
+				<source>weight</source>
+			</trans-unit>
+			<trans-unit id="record_type.description">
+				<source>recordType</source>
+			</trans-unit>
+			<trans-unit id="tablename.description">
+				<source>tablename</source>
+			</trans-unit>
+			<trans-unit id="item.description">
+				<source>Artikel</source>
+			</trans-unit>
+			<trans-unit id="prices.description">
+				<source>Preise</source>
+			</trans-unit>
+			<trans-unit id="cart.description">
+				<source>cart</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

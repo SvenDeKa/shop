@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-17T15:50:21Z" product-name="z3_shop">
+		<header/>
+		<body>
+
+			<trans-unit id="number.description">
+				<source>Bestellnummer</source>
+			</trans-unit>
+			<trans-unit id="payment_type.description">
+				<source>Zahlungsmethode</source>
+			</trans-unit>
+			<trans-unit id="shipping_type.description">
+				<source>Versandart</source>
+			</trans-unit>
+			<trans-unit id="payment_fee.description">
+				<source>Zahlungsgebühr</source>
+			</trans-unit>
+			<trans-unit id="shipping_fee.description">
+				<source>Versanmdkosten</source>
+			</trans-unit>
+			<trans-unit id="confirmed_terms.description">
+				<source>AGBs akzeptiert</source>
+			</trans-unit>
+			<trans-unit id="ordered.description">
+				<source>Zeitpunkt der Bestellung</source>
+			</trans-unit>
+			<trans-unit id="shipped.description">
+				<source>Zeitpunkt des Versands</source>
+			</trans-unit>
+			<trans-unit id="payed.description">
+				<source>Zeitpunkt der Zahlung</source>
+			</trans-unit>
+			<trans-unit id="crypt.description">
+				<source>Hash aus uid, ordered und number</source>
+			</trans-unit>
+			<trans-unit id="products.description">
+				<source>products</source>
+			</trans-unit>
+			<trans-unit id="shipping_address.description">
+				<source>shippingAddress</source>
+			</trans-unit>
+			<trans-unit id="billing_address.description">
+				<source>billingAddress</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

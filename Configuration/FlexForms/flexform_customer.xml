@@ -1,0 +1,41 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Function</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<switchableControllerActions>
+						<TCEforms>
+							<label>Select function</label>
+							<onChange>reload</onChange>
+							<config>
+								<type>select</type>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">Adressen anzeigen</numIndex>
+										<numIndex index="1">Address->list;Address->show;Address->validate;Address->new;Address->create;Address->edit;Address->update;Address->delete;</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">Adresse hinzufügen</numIndex>
+										<numIndex index="1">Address->new;Address->validate;Address->create;Address->list;Address->show;Address->edit;Address->update;</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">Adressen bearbeiten</numIndex>
+										<numIndex index="1">Address->edit;Address->validate;Address->update;Address->new;Address->create;Address->list;Address->show;Address->delete;</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</switchableControllerActions>
+					
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

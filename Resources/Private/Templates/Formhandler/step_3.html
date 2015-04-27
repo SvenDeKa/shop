@@ -1,0 +1,70 @@
+<!-- ###TEMPLATE_FORM3### -->
+
+	###master_multipart-form-start_cart-form###
+		<a href="#" class="back-link noscript-hidden"><i class="humbaur-icon-arrow-great-left"></i></a>
+		
+		<h1>Zahlungsart und Versand</h1>
+		<h2>###master_steps###</h2>
+		
+		<div class="shop-cart">
+			
+			<!-- Ausgabe Zahlungsarten -->
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>###LLL:formPartHeader_payment###</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<label class="checkbox-inline left">
+						<input type="radio" id="payment-transfer" checked="checked" name="###formValuesPrefix###[payment]" value="###LLL:value_paymentMoneyTransfer###" ###checked_shipping_###LLL:value_paymentMoneyTransfer###### />
+						###LLL:label_paymentMoneyTransfer###
+					</label>
+				</div>
+			</div>
+			
+			
+			<!-- Ausgabe Versandarten -->
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>###LLL:formPartHeader_shipping###</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<label class="checkbox-inline left">
+						<input type="radio" id="shipping-standart" checked="checked" name="###formValuesPrefix###[shipping]" value="###LLL:value_shippingStandart###" ###checked_shipping_###LLL:value_shippingStandart###### />
+						###LLL:label_shippingStandart###
+					</label>
+				</div>
+				<div class="col-sm-6">
+					<div class="box gray">
+						<div class="row">
+							<div class="col-sm-12">
+								<strong>###LLL:header_freightcosts###</strong>
+								<p>
+									###LLL:text_upTo### 10kg: 8,50€<br/>
+									###LLL:text_upTo### 15kg: 12,00€<br/>
+									###LLL:text_upTo### 20kg: 18,00€<br/>
+									###LLL:text_upTo### 70kg: 53,50€ ###LLL:text_logisticsHint###<br/>
+									###LLL:text_over### 70kg: ###LLL:text_onlyOnRequest### <br/>
+								</p>
+								<p>
+									###LLL:text_freightDisclaimer###
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row cart-next">
+				<div class="col-sm-3 pull-left">
+					###master_submit_prev-step###
+				</div>
+				<div class="col-sm-3 pull-right">
+					###master_sumbit_next-step###
+				</div>
+			</div>
+		</div>
+	###master_form-end###
+<!-- ###TEMPLATE_FORM3### -->

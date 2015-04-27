@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-17T15:50:21Z" product-name="z3_shop">
+		<header/>
+		<body>
+
+			<trans-unit id="feowner.description">
+				<source>feowner</source>
+			</trans-unit>
+			<trans-unit id="feuser.description">
+				<source>feuser</source>
+			</trans-unit>
+			
+			
+			<trans-unit id="is_default_billing.description">
+				<source>ist Standard-Rechnungsadresse</source>
+			</trans-unit>
+			
+			<trans-unit id="is_default_shipping.description">
+				<source>ist Standard-Lieferadresse</source>
+			</trans-unit>
+			
+			<trans-unit id="salutation.description">
+				<source>Anrede</source>
+			</trans-unit>
+			<trans-unit id="first.description">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="lastname.description">
+				<source>Nachname</source>
+			</trans-unit>
+			<trans-unit id="addressStreet.description">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="addressNumber.description">
+				<source>Hausnummer</source>
+			</trans-unit>
+			<trans-unit id="postal_code.description">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="country.description">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="static_country.description">
+				<source>Land (aus static_info_tables)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

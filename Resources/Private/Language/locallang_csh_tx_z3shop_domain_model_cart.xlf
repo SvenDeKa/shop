@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-17T15:50:21Z" product-name="z3_shop">
+		<header/>
+		<body>
+
+			<trans-unit id="session_id.description">
+				<source>sessionId</source>
+			</trans-unit>
+			<trans-unit id="product_type.description">
+				<source>Produkt-Typ</source>
+			</trans-unit>
+			<trans-unit id="feuser.description">
+				<source>feuser</source>
+			</trans-unit>
+			<trans-unit id="products.description">
+				<source>products</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

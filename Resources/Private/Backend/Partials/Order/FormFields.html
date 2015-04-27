@@ -1,0 +1,40 @@
+<label for="number">
+	<f:translate key="tx_z3shop_domain_model_order.number" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="number" /><br />
+<label for="paymentType">
+	<f:translate key="tx_z3shop_domain_model_order.payment_type" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="paymentType" /><br />
+<label for="shippingType">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_type" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="shippingType" /><br />
+<label for="paymentFee">
+	<f:translate key="tx_z3shop_domain_model_order.payment_fee" />
+</label><br />
+	<f:form.textfield property="paymentFee" /><br />
+<label for="shippingFee">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_fee" />
+</label><br />
+	<f:form.textfield property="shippingFee" /><br />
+<label for="confirmedTerms">
+	<f:translate key="tx_z3shop_domain_model_order.confirmed_terms" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.checkbox property="confirmedTerms" value="1" /><br />
+<label for="ordered">
+	<f:translate key="tx_z3shop_domain_model_order.ordered" />
+</label><br />
+	<f:form.textfield property="ordered"  value="{order.ordered->f:format.date()}" /><br />
+<label for="shipped">
+	<f:translate key="tx_z3shop_domain_model_order.shipped" />
+</label><br />
+	<f:form.textfield property="shipped" /><br />
+<label for="payed">
+	<f:translate key="tx_z3shop_domain_model_order.payed" />
+</label><br />
+	<f:form.textfield property="payed" /><br />
+<label for="crypt">
+	<f:translate key="tx_z3shop_domain_model_order.crypt" />
+</label><br />
+	<f:form.textfield property="crypt" /><br />

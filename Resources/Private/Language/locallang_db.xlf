@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-02-17T15:50:21Z" product-name="z3_shop">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_z3shop_domain_model_product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.amount_in_shop">
+				<source>Amount In Shop</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.weight">
+				<source>Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.record_type">
+				<source>Record Type</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.tablename">
+				<source>Tablename</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.item">
+				<source>Item</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.prices">
+				<source>Prices</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_product.cart">
+				<source>Cart</source>
+			</trans-unit>
+
+			<trans-unit id="tx_z3shop_domain_model_order">
+				<source>Order</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.number">
+				<source>Number</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.payment_type">
+				<source>Payment Type</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.shipping_type">
+				<source>Shipping Type</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.payment_fee">
+				<source>Payment Fee</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.shipping_fee">
+				<source>Shipping Fee</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.confirmed_terms">
+				<source>Confirmed Terms</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.ordered">
+				<source>Ordered</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.shipped">
+				<source>Shipped</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.payed">
+				<source>Payed</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.crypt">
+				<source>Crypt</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.products">
+				<source>Products</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.cart">
+				<source>Warenkorb</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.shipping_address">
+				<source>Shipping Address</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_order.billing_address">
+				<source>Billing Address</source>
+			</trans-unit>
+
+			<trans-unit id="tx_z3shop_domain_model_cart">
+				<source>Cart</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_cart.session_id">
+				<source>Session Id</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_cart.product_type">
+				<source>Product Type</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_cart.feuser">
+				<source>Feuser</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_cart.products">
+				<source>Products</source>
+			</trans-unit>
+
+			<trans-unit id="tx_z3shop_domain_model_price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_price.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_price.variant">
+				<source>Variante</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_price.taxrate">
+				<source>Tax rate</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_price.quantity">
+				<source>Quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_price.is_highlight">
+				<source>Is Highlight</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_price.currency">
+				<source>Currency</source>
+			</trans-unit>
+
+			<trans-unit id="tx_z3shop_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.feowner">
+				<source>Feowner</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.feuser">
+				<source>Feuser</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.salutation">
+				<source>Anrede</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.firstname">
+				<source>Vorname</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.lastname">
+				<source>Nachname</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.address_street">
+				<source>Straße</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.address_number">
+				<source>Hausnummer</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.company">
+				<source>Firma</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.extra1">
+				<source>extra Feld 1</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.extra2">
+				<source>extra Feld 2</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.postal_code">
+				<source>Postleitzahl</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.city">
+				<source>Ort</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.email">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.phone">
+				<source>telefon</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.mobile">
+				<source>handy</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.fax">
+				<source>fax</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.country">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.static_country">
+				<source>land (static_info)</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.is_default_shipping">
+				<source>ist Standard-Lieferadresse</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_address.is_default_billing">
+				<source>ist Standard-Rechnungsadresse</source>
+			</trans-unit>
+
+			<trans-unit id="tx_z3shop_domain_model_productcart">
+				<source>Product Cart</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_productcart.amount">
+				<source>Amount</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_productcart.amount_special">
+				<source>Amount Special</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_productcart.product">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_productcart.variant">
+				<source>Variante</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_productcart.cart">
+				<source>Cart</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_productcart.reciever">
+				<source>Reciever</source>
+			</trans-unit>
+
+			<trans-unit id="tx_z3shop_domain_model_customer">
+				<source>Kunde</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_customer.number">
+				<source>Kundennummer</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_customer.addresses">
+				<source>Adressen</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_customer.orders">
+				<source>Bestellungen</source>
+			</trans-unit>
+			<trans-unit id="tx_z3shop_domain_model_customer.cart">
+				<source>Warenkorb</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,112 @@
+<label for="number">
+	<f:translate key="tx_z3shop_domain_model_order.number" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="number" /><br />
+<label for="paymentType">
+	<f:translate key="tx_z3shop_domain_model_order.payment_type" />
+</label><br />
+	<f:form.textfield property="paymentType" /><br />
+<label for="shippingType">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_type" />
+</label><br />
+	<f:form.textfield property="shippingType" /><br />
+<label for="priceSumNet">
+	<f:translate key="tx_z3shop_domain_model_order.price_sum_net" />
+</label><br />
+	<f:form.textfield property="priceSumNet" /><br />
+<label for="priceSumGross">
+	<f:translate key="tx_z3shop_domain_model_order.price_sum_gross" />
+</label><br />
+	<f:form.textfield property="priceSumGross" /><br />
+<label for="shippingFee">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_fee" />
+</label><br />
+	<f:form.textfield property="shippingFee" /><br />
+<label for="paymentFee">
+	<f:translate key="tx_z3shop_domain_model_order.payment_fee" />
+</label><br />
+	<f:form.textfield property="paymentFee" /><br />
+<label for="billingFirstname">
+	<f:translate key="tx_z3shop_domain_model_order.billing_firstname" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="billingFirstname" /><br />
+<label for="billingLastname">
+	<f:translate key="tx_z3shop_domain_model_order.billing_lastname" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="billingLastname" /><br />
+<label for="billingCompany">
+	<f:translate key="tx_z3shop_domain_model_order.billing_company" />
+</label><br />
+	<f:form.textfield property="billingCompany" /><br />
+<label for="billingStreetNr">
+	<f:translate key="tx_z3shop_domain_model_order.billing_street_nr" />
+</label><br />
+	<f:form.textfield property="billingStreetNr" /><br />
+<label for="billingZipCity">
+	<f:translate key="tx_z3shop_domain_model_order.billing_zip_city" />
+</label><br />
+	<f:form.textfield property="billingZipCity" /><br />
+<label for="billingCountry">
+	<f:translate key="tx_z3shop_domain_model_order.billing_country" />
+</label><br />
+	<f:form.textfield property="billingCountry" /><br />
+<label for="billingPhone">
+	<f:translate key="tx_z3shop_domain_model_order.billing_phone" />
+</label><br />
+	<f:form.textfield property="billingPhone" /><br />
+<label for="billingEmail">
+	<f:translate key="tx_z3shop_domain_model_order.billing_email" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="billingEmail" /><br />
+<label for="altShippingAddress">
+	<f:translate key="tx_z3shop_domain_model_order.alt_shipping_address" />
+</label><br />
+	<f:form.checkbox property="altShippingAddress" value="1" /><br />
+<label for="shippingFirstname">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_firstname" />
+</label><br />
+	<f:form.textfield property="shippingFirstname" /><br />
+<label for="shippingLastname">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_lastname" />
+</label><br />
+	<f:form.textfield property="shippingLastname" /><br />
+<label for="shippingCompany">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_company" />
+</label><br />
+	<f:form.textfield property="shippingCompany" /><br />
+<label for="shippingStreetNr">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_street_nr" />
+</label><br />
+	<f:form.textfield property="shippingStreetNr" /><br />
+<label for="shippingZipCity">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_zip_city" />
+</label><br />
+	<f:form.textfield property="shippingZipCity" /><br />
+<label for="shippingPhone">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_phone" />
+</label><br />
+	<f:form.textfield property="shippingPhone" /><br />
+<label for="priceSumAll">
+	<f:translate key="tx_z3shop_domain_model_order.price_sum_all" />
+</label><br />
+	<f:form.textarea property="priceSumAll" cols="40" rows="15" /><br />
+<label for="tax">
+	<f:translate key="tx_z3shop_domain_model_order.tax" />
+</label><br />
+	<f:form.textfield property="tax" /><br />
+<label for="payed">
+	<f:translate key="tx_z3shop_domain_model_order.payed" />
+</label><br />
+	<f:form.textfield property="payed"  value="{order.payed->f:format.date()}" /><br />
+<label for="shipped">
+	<f:translate key="tx_z3shop_domain_model_order.shipped" />
+</label><br />
+	<f:form.textfield property="shipped"  value="{order.shipped->f:format.date()}" /><br />
+<label for="checkedTerms">
+	<f:translate key="tx_z3shop_domain_model_order.checked_terms" />
+</label><br />
+	<f:form.textfield property="checkedTerms" /><br />
+<label for="shippingWeight">
+	<f:translate key="tx_z3shop_domain_model_order.shipping_weight" />
+</label><br />
+	<f:form.textfield property="shippingWeight" /><br />

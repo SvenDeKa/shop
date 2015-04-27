@@ -1,0 +1,109 @@
+<!-- ###TEMPLATE_FORM4### -->
+	###master_multipart-form-start_cart-form###
+	
+		<a href="#" class="back-link noscript-hidden"><i class="humbaur-icon-arrow-great-left"></i></a>
+		
+		<h1>Bestellung abschließen</h1>
+		<h2>###master_steps###</h2>
+		
+		<div class="shop-cart">
+		
+			<div class="row clearfix">
+			
+				<!-- Rechnungsadresse -->
+				<div class="col-sm-4">
+					<h3>
+						###LLL:formPartHeader_billingAddress###
+					</h3>
+					<p>
+						###value_billingsalutation###	###value_billingfirstname### ###value_billinglastname###<br/>
+						
+						<!-- ###ISSET_billingcompany### -->
+						###value_billingcompany###<br/>
+						<!-- ###ISSET_billingcompany### -->
+						
+						<!-- ###ISSET_billingstreetnr### -->
+						###value_billingstreetnr###<br/>
+						<!-- ###ISSET_billingstreetnr### -->
+						
+						<!-- ###ISSET_billingzip&&billingcity### -->
+						###value_billingzip### ###value_billingcity###<br/>
+						<!-- ###ISSET_billingzip&&billingcity### -->
+						
+						<!-- ###ISSET_billingcountry### -->
+						###value_billingcountry###<br/>
+						<!-- ###ISSET_billingcountry### -->
+					</p>
+					<p>
+						<!-- ###ISSET_billingphone### -->
+						###value_billingphone###<br/>
+						<!-- ###ISSET_billingphone### -->
+						
+						<!-- ###ISSET_billingemail### -->
+						###value_billingemail###<br/>
+						<!-- ###ISSET_billingemail### -->
+					</p>
+				</div>
+				
+				
+				<!-- Versandadresse -->
+				<div class="col-sm-4">
+					<h3>
+						###LLL:formPartHeader_shippingAddress###
+					</h3>
+					<p>
+						###value_shippingsalutation###	###value_shippingfirstname### ###value_shippinglastname###<br/>
+						###value_shippingcompany###<br/>
+						###value_shippingstreetnr###<br/>
+						###value_shippingzip### ###value_shippingcity###<br/>
+						###value_shippingcountry###
+					</p>
+					<p>
+						###value_shippingphone###
+					</p>
+				</div>
+				
+				<!-- Zahlungs- und Versandart -->
+				<div class="col-sm-4">
+					<h3>
+						###LLL:formPartHeader_payment###
+					</h3>
+					<p>
+						###value_payment###
+					</p>
+					<h3>
+						###LLL:formPartHeader_shipping###
+					</h3>
+					<p>
+						###value_shipping###
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row-fluid clearfix">
+			###master_checkbox_privacypolicy###
+		</div>
+		
+		<div class="row clearfix">
+			<div class="col-sm-6">
+				###ERROR###
+			</div>
+		</div>
+		
+		<div class="row-fluid clearfix">
+			###CART_NOEDIT###
+		</div>
+		
+		<div class="row cart-next">
+			<div class="col-sm-3 pull-left">
+				###master_submit_prev-step###
+			</div>
+			<div class="col-sm-3 pull-right">
+				###master_section-start###
+					###master_order-now###
+				###master_section-end###
+			</div>
+		</div>
+	###master_form-end###
+<!-- ###TEMPLATE_FORM4### -->
